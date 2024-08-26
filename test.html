@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="_css/bootstrap.css">
+  <link rel="stylesheet" href="./css.css">
+  <script src="./_js/bootstrap.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+
+</head>
+
+<script>
+  window.onload
+</script>
+
+<body style="font-family: LXGW WenKai TC; background-color: beige;">
+
+  <!--  -->
+  <header class="header" id="navigation-menu" style="background-color: grey; ">
+    <div class="container">
+      <nav style="display: flex;">
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">主頁</a> </li>
+          <li> <a href="#room" class="nav-link">房型介紹</a> </li>
+          <li> <a href="#sur" class="nav-link">環境介紹</a> </li>
+          <li> <a href="#contact" class="nav-link">聯絡我們</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1800" id="pic">
+      <div class="carousel-inner mx-auto navbar-expand-lg" id="mainpic_container">
+        <div class="carousel-item active" id="pic_container">
+          <img src="./pic/748429d7.jpg" class="pic">
+        </div>
+        <div class="carousel-item" id="pic_container">
+          <img src="./pic/83700aea.jpg" class="pic">
+        </div>
+        <div class="carousel-item" id="pic_container">
+          <img src="./pic/caption.jpg" class="pic">
+        </div>
+        <div class="carousel-item" id="pic_container">
+          <img src="./pic/cc241b0f.jpg" class="pic">
+        </div>
+        <div class="carousel-item" id="pic_container">
+          <img src="./pic/caption (1).jpg" class="pic">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#pic" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#pic" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>入住日期:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>退房日期:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>成人:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>孩童:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <input type="submit" value="查詢">
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div id="aboutus">
+      <h4>關於我們</h4>
+      <div id="about_container">
+        <img src="./pic/128998665.jpg" id="main_pic">
+      </div>
+      <div id="introdiv" class="h-4">
+        <p id="introtext">
+          比佛利山莊位於清境農場旁，台14甲公路，臨標7.1公里處，清境國小旁。距離全亞洲最高的星巴克約四百公尺而已，有寬敞的停車空間、景觀式咖啡雅座，以及桃花園區、松林園區、有機花草園區…等，在四周美景環繞下，您可以在這裡觀雲海、賞日出、看星星，讓您悠閒的徜徉在群山的懷抱當中，一切都是這麼的愜意自然。
+        </p>
+
+        <p id="introtext">
+          本山莊採用加拿大香杉建造而成，冬暖夏涼，夜間並且不斷釋放出芬多精，讓您舒服的進入夢鄉。每間房間皆有景觀台且面向遼闊山景，四周環境種植許多肖楠(台灣檜木)、櫻花、桃花、楓樹、高山杜鵑…等；位於海拔1800公尺的比佛利山莊，景緻優雅、氣候宜人，面對山勢雄偉之百岳群峰，真叫人連忘返。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="room top" id="room">
+    <div class="container">
+      <div class="heading_top ">
+        <div class="heading">
+          <h5>房型介紹</h5>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="./pic/2manori2F.jpeg" alt="">
+          </div>
+          <div class="text">
+            <h3>精緻雙人房</h3>
+            <p>1 or 2樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="./pic/2manvip.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>豪華雙人房</h3>
+            <p>5樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="./pic/4manori.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>山景家庭房</h3>
+            <p>1 or 2樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="./pic/4manvip.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>豪華家庭房</h3>
+            <p>4樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="./pic/4man2FVIP.jpeg" alt="">
+          </div>
+          <div class="text">
+            <h3>樓中樓家庭房</h3>
+            <p>3樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="./pic/8manone.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>家庭套房</h3>
+            <p>3樓</p>
+            <p>平日（一～四）價格：1380 <br> 假日（五〜日）價格：1500 <br>
+              入住時間：15：00（最早）/ 21：00（最晚）<br> 退房時間：10：00</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>住宿評論：</h5>
+          <h2></h2>
+        </div>
+
+        <div>
+          <p>「住宿二間雙人客房,位於一樓,老闆娘給人親切感,服務講解熱心清楚,房間內及設施雖非新穎,但乾凈清爽,環境鳥語花香,令人愉快又放鬆。」 </p>
+          <p>「陽台有非常好的景色，晚上安靜，早餐簡單美味，服務非常親切」</p>
+          <p>「只需10分鐘走路就到市中心，方便！
+            喜歡登山的朋友，推薦這裡，去合歡山、步道方便，還有早上起床就看到東邊日出，看到連綿的山脈！
+            老闆好好，送我們蕉去登山，讓載我們去公路坐車回埔里。
+            早餐滿足，有不同地道自家的配菜，有地瓜粥！」</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="sur top" id="sur">
+    <div class="container flex allsurpic">
+      <div class="image_item">
+        <img src="./pic/view/view1.jpg" style="max-width: 80%; height: auto;">
+        <img src="./pic/view/view2.jpg" style="max-width: 80%; height: auto;">
+        <img src="./pic/view/view3.jpg" style="max-width: 80%; height: auto;">
+
+      </div>
+
+      <div class="right" style="height: 600px;">
+        <div class="text">
+          <h2>環境介紹</h2>
+          <p> 清境絕美山巒景觀 <br>比佛利山莊<br> 冥想放空享受靜謐好心情</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">小瑞士花園</h2>
+            <div class="accordionItemContent">
+              <p>清境小瑞士花園，因具北歐風光之美素有「台灣小瑞士」、「霧上桃園」之美名，故而取名為「清境小瑞士花園」。
+                破曉的清境雲霧，像幅畫中飄逸的潑墨山水，極目遠眺，山嵐正以漸進的方式瀰漫開來，與遠山雲影合而回一，此時的山林田野純淨之美，令人心曠神怡。
+
+                有人說：到清境得以是北歐風光之美，清境之美所謂：一折青山一扇屏、一灣碧水一條琴的意境，如此人間淨土，清境小瑞士之美名不逕而走。
+              </p>
+              <img src="pic/view/view5.jpg" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">清境農場</h2>
+            <div class="accordionItemContent">
+              <p>霧上桃源，體驗清境農場之美
+                地處海拔1750公尺，空氣清新、林木蒼鬱、綠草如茵
+                徜徉在寬闊草原與景觀步道，令人流連忘返!
+              </p>
+              <img src="./pic/view/view7.jpg" alt="">
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">天空步道</h2>
+            <div class="accordionItemContent">
+              <p>「腳下綠草如茵，身前深谷千米，放眼群山如帶，舉頭晴空蔚藍。」<br>
+                這是清境高空觀景步道的印象寫照，親臨其境用2000步走在海拔1700公尺的觀景步道又是另種風情。
+              </p>
+              <img src="./pic/view/view6.png" alt="">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+  <footer>
+    <div class="container grid top last" style="background-color: antiquewhite;">
+      <div class="box">
+        <p>接受付款方式</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>附近景點官網與新聞</h3>
+
+        <ul>
+          <li><a href="https://www.cingjing.gov.tw/" style="color: black;">清境農場</a></li>
+          <li><a href="https://www.beica.com.tw/" style="color: black;">貝卡莊園</a></li>
+          <li><a href="https://torch.cja.org.tw/" style="color: black;">清淨火把節</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>注意資訊</h3>
+        <ul>
+          <li>禁止吸菸</li>
+          <li>住客必須在 22:00～6:00 放低音量</li>
+          <li>此住宿無法提供嬰兒床或加床</li>
+          <li>不允許攜帶寵物入住</li>
+          <li>取消和預付款政策根據各種住宿類型而有所不同。 請輸入您的入住日期並參閱您所需的客房的條款。</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>聯絡我們</h3>
+
+        <ul>
+          <li>546台灣南投縣仁愛鄉榮光巷23-1號</li>
+          <li><i class="far fa-envelope"></i>bevely123@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>049-2803781 </li>
+          <li><i class="far fa-phone-alt"></i>049-2803780 </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
